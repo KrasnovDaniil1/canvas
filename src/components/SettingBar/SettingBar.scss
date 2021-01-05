@@ -1,0 +1,14 @@
+$setting-bar-height: 40px;
+$setting-bar-color: white;
+
+
+.setting-bar {
+    height: $setting-bar-height ;
+    background-color: $setting-bar-color; 
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    box-shadow: 0px 4px 5px gray;
+    top: 40px ;
+}

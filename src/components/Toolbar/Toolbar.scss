@@ -1,0 +1,53 @@
+$toolbar-height: 40px;
+$toolbar-color: white;
+
+.toolbar {
+    height: $toolbar-height ;
+    background-color: $toolbar-color; 
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    box-shadow: 0px 4px 5px gray;
+    z-index: 999;
+    justify-content: space-between;
+
+    .button {
+        height: 25px;
+        width: 25px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background-size: cover;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .button-brash {
+        background: url('../../Assets/Image/brush.png') no-repeat center center;
+    }
+    .button-rect {
+        background: url('../../Assets/Image/rect.png') no-repeat center center;
+    }
+    .button-circle {
+        background: url('../../Assets/Image/circle.png') no-repeat center center;
+    }
+    .button-eraser {
+        background: url('../../Assets/Image/eraser.png') no-repeat center center;
+    }
+    .button-line {
+        background: url('../../Assets/Image/line.png') no-repeat center center;
+    }
+    .input-color {
+        width: 45px;
+    }
+    .button-undo {
+        background: url('../../Assets/Image/undo.png') no-repeat center center;
+    }
+    .button-redo {
+        background: url('../../Assets/Image/redo.png') no-repeat center center;
+    }
+    .button-save {
+        background: url('../../Assets/Image/save.png') no-repeat center center;
+    }
+
+}
