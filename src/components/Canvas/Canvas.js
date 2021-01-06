@@ -17,10 +17,14 @@ useEffect(() => {
     
     } , [] )
 
+    const mouseDownHandler = () => {
+        canvasState.pushToUndo(canvasRef.current.toDataURL())
+
+    }
 
         return (
             <div className="canvas"> 
-                <canvas ref={canvasRef} className="canvas-paint" width={600} height={400} />
+                <canvas onMouseDown={() => mouseDownHandler()} ref={canvasRef} className="canvas-paint" width={600} height={400} />
             </div>
         );
 });
