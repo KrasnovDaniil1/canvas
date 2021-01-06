@@ -1,6 +1,5 @@
 import { makeAutoObservable } from "mobx";
 
-
 class ToolState {
     tool = null
     
@@ -23,7 +22,6 @@ class ToolState {
     setLineWidth(width) {
         this.tool.lineWidth = width
     }
-
 }
 
 export default new ToolState()

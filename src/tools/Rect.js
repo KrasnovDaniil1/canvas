@@ -1,6 +1,5 @@
 import Tool from "./Tool";
 
-
 export default class Rect extends Tool {
     constructor(canvas) {
         super(canvas);
@@ -21,21 +20,18 @@ export default class Rect extends Tool {
     mouseDownHandler(e) {
         this.mouseDown = true
         this.ctx.beginPath() 
-        //this.ctx.moveTo(e.pageX - e.target.offsetLeft , e.pageY - e.target.offsetTop) 
         this.startX = e.pageX - e.target.offsetLeft;
         this.startY = e.pageY - e.target.offsetTop;
         this.saved = this.canvas.toDataURL();
     }
 
-    mouseMoveHandler(e) {
-       
+    mouseMoveHandler(e) {     
         if (this.mouseDown) {
             let currentX  = e.pageX - e.target.offsetLeft;
             let currentY = e.pageY - e.target.offsetTop;
             let width = currentX - this.startX;
             let height = currentY - this.startY;
-            this.draw(this.startX , this.startY , width ,height)
-           
+            this.draw(this.startX , this.startY , width ,height)   
         }
     }
 
@@ -51,8 +47,5 @@ export default class Rect extends Tool {
             this.ctx.stroke();
 
         }
-        
-
     }
-
 }

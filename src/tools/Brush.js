@@ -1,6 +1,5 @@
 import Tool from "./Tool";
 
-
 export default class Brush extends Tool {
     constructor(canvas) {
         super(canvas);
@@ -22,15 +21,11 @@ export default class Brush extends Tool {
         this.mouseDown = true
         this.ctx.beginPath() 
         this.ctx.moveTo(e.pageX - e.target.offsetLeft , e.pageY - e.target.offsetTop) 
-        
-
     }
 
-    mouseMoveHandler(e) {
-       
+    mouseMoveHandler(e) { 
         if (this.mouseDown) {
-            this.draw(e.pageX - e.target.offsetLeft , e.pageY - e.target.offsetTop)
-           
+            this.draw(e.pageX - e.target.offsetLeft , e.pageY - e.target.offsetTop)       
         }
     }
 

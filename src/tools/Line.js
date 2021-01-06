@@ -1,6 +1,5 @@
 import Tool from "./Tool";
 
-
 export default class Line extends Tool {
     constructor(canvas) {
         super(canvas);
@@ -16,7 +15,6 @@ export default class Line extends Tool {
 
     mouseUpHandler(e) {
         this.mouseDown = false
-        
     }
 
     mouseDownHandler(e) {
@@ -28,8 +26,7 @@ export default class Line extends Tool {
         this.saved = this.canvas.toDataURL()
     }
 
-    mouseMoveHandler(e) {
-       
+    mouseMoveHandler(e) {      
         if (this.mouseDown) {
             this.draw(e.pageX-e.target.offsetLeft, e.pageY-e.target.offsetTop);
         }
@@ -45,10 +42,6 @@ export default class Line extends Tool {
             this.ctx.moveTo(this.currentX, this.currentY )
             this.ctx.lineTo(x, y)
             this.ctx.stroke()
-
         }
-        
-
     }
-
 }

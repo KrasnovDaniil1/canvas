@@ -1,23 +1,18 @@
-import React , {Component} from 'react';
-import './App.scss';
+import React from 'react';
 import Toolbar from '../Toolbar/Toolbar.js'
 import SettingBar from '../SettingBar/SettingBar.js'
 import Canvas from '../Canvas/Canvas.js';
+import './App.scss';
 
-export default class App extends React.Component {
+const App = () => {
     
-constructor(props) {
-    super(props)
-
+    return (
+        <div className="app">
+            <Toolbar />
+            <SettingBar />
+            <Canvas />
+        </div>
+    )
 }
-    render() {
-        return (
-            <div className="app">
-                <Toolbar />
-                <SettingBar />
-                <Canvas />
-            </div>
-        )
-    }
 
-}
+export default App;

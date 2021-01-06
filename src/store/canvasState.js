@@ -1,20 +1,16 @@
-
 import {makeAutoObservable} from "mobx";
 
 class CanvasState {
-
     canvas = null
     undoList = []
     redoList = []
 
     constructor() {
-        makeAutoObservable(this)
-        
+        makeAutoObservable(this)   
     }
 
     setCanvas(canvas) {
-        this.canvas = canvas
-        
+        this.canvas = canvas      
     }
 
     pushToUndo(data) {
@@ -27,7 +23,6 @@ class CanvasState {
 
     undo() {
         let ctx = this.canvas.getContext('2d')
-
         if (this.undoList.length > 0) {
             let dataUrl = this.undoList.pop()
             this.redoList.push(this.canvas.toDataURL())
@@ -44,7 +39,6 @@ class CanvasState {
 
     redo() {
         let ctx = this.canvas.getContext('2d')
-
         if (this.redoList.length > 0) {
             let dataUrl = this.redoList.pop()
             this.undoList.push(this.canvas.toDataURL())
@@ -56,7 +50,6 @@ class CanvasState {
             }
         } 
     }
-
 }
 
 export default new CanvasState()

@@ -1,6 +1,5 @@
 import Tool from "./Tool";
 
-
 export default class Rect extends Tool {
     constructor(canvas) {
         super(canvas);
@@ -14,8 +13,7 @@ export default class Rect extends Tool {
     }
 
     mouseUpHandler(e) {
-        this.mouseDown = false
-        
+        this.mouseDown = false;     
     }
 
     mouseDownHandler(e) {
@@ -27,8 +25,7 @@ export default class Rect extends Tool {
         this.saved = canvasData
     }
 
-    mouseMoveHandler(e) {
-       
+    mouseMoveHandler(e) {      
         if (this.mouseDown) {
             let curentX =  e.pageX-e.target.offsetLeft
             let curentY =  e.pageY-e.target.offsetTop
@@ -49,10 +46,6 @@ export default class Rect extends Tool {
             this.ctx.arc(x, y, r, 0, 2*Math.PI)
             this.ctx.fill()
             this.ctx.stroke()
-
         }
-        
-
     }
-
 }

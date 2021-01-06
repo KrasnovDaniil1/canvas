@@ -1,9 +1,5 @@
-
-
-
 export default class Tool {
     constructor(canvas) {
-        
         this.canvas = canvas
         this.ctx = canvas.getContext('2d')
         this.destroyEvents()
@@ -21,11 +17,9 @@ export default class Tool {
         this.ctx.lineWidth = width;
     }
 
-destroyEvents() {
-    this.canvas.onmousemove = null
-    this.canvas.onmousedown = null
-    this.canvas.onmouseup = null
-
-}
-
+    destroyEvents() {
+        this.canvas.onmousemove = null
+        this.canvas.onmousedown = null
+        this.canvas.onmouseup = null
+    }
 }
